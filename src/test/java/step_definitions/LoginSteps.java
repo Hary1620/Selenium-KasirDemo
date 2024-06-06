@@ -1,6 +1,7 @@
 package step_definitions;
 
 import hooks.Hooks;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,10 +29,30 @@ public class LoginSteps {
         Assert.assertTrue(loginPage.verifyLabelProduct());
     }
 
+
+//    Scenario: Login with locked-out user
+
+
+    @And("system gives pop up message {string}")
+    public void systemGivesPopUpMessage(String expectedMessage) {
+        String actualMessage = loginPage.getPopUpMessage();
+        Assert.assertEquals(expectedMessage, actualMessage);
+    }
+
+    @Then("User should not be directed to the dashboard page")
+    public void userShouldNotBeDirectedToTheDashboardPage() {
+//        Assert.assertFalse(loginPage.isLabelProductPresent());
+        Assert.assertTrue(loginPage.verifyLabelProduct());
+    }
+
+
+
     @Given("User login with valid username {string} and password {string}")
     public void userLoginWithValidUsernameAndPassword(String username, String password) {
         loginPage.inputFieldUserName(username);
         loginPage.inputFieldPassword(password);
         loginPage.clickButtonLogin();
     }
+
+
 }

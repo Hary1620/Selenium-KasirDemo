@@ -20,6 +20,8 @@ public class ProductPage extends BasePage {
 
     @FindBy (id = "add-to-cart-sauce-labs-backpack")
     private WebElement btnAddTocardSauceLabsBackpackk;
+    @FindBy(id = "shopping_cart_container")
+    private WebElement cart;
 
     public boolean verifyTitleProductSauceLabsBackpack(){
         return isDisplayed(titleProductSauceLabsBackpack);
@@ -41,6 +43,10 @@ public class ProductPage extends BasePage {
         scrollIntoView(btnAddTocardSauceLabsBackpackk);
         waitForElementClickable(btnAddTocardSauceLabsBackpackk);
         click(btnAddTocardSauceLabsBackpackk);
+    }
+    public void clickCart(){
+        waitForElementClickable(cart);
+        click(cart);
     }
 
 
