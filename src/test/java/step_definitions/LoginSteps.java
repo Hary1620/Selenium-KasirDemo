@@ -27,4 +27,11 @@ public class LoginSteps {
     public void userShouldBeDirectedToTheDashboardPage() {
         Assert.assertTrue(loginPage.verifyLabelProduct());
     }
+
+    @Given("User login with valid username {string} and password {string}")
+    public void userLoginWithValidUsernameAndPassword(String username, String password) {
+        loginPage.inputFieldUserName(username);
+        loginPage.inputFieldPassword(password);
+        loginPage.clickButtonLogin();
+    }
 }
