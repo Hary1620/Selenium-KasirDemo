@@ -5,6 +5,9 @@ When User login with valid username "standard_user" and password "secret_sauce"
   And sort product icon is displayed
   And user click on sort product icon
   And Choose sort Name (Z to A)
-  Then user click add to cart product "Sauce Labs Onesie" and product "Test.allTheThings() T-Shirt (Red)"
+  And user click add to cart product "Sauce Labs Onesie" and product "Test.allTheThings() T-Shirt (Red)"
+  And Click cart icon
+  And click remove button on product "Test.allTheThings() T-Shirt (Red)"
+  Then user click continue shopping button
 
 

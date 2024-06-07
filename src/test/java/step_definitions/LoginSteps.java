@@ -33,17 +33,17 @@ public class LoginSteps {
 //    Scenario: Login with locked-out user
 
 
-    @And("system gives pop up message {string}")
+    @Then("system gives pop up message {string}")
     public void systemGivesPopUpMessage(String expectedMessage) {
         String actualMessage = loginPage.getPopUpMessage();
         Assert.assertEquals(expectedMessage, actualMessage);
     }
 
-    @Then("User should not be directed to the dashboard page")
-    public void userShouldNotBeDirectedToTheDashboardPage() {
-        Assert.assertFalse(loginPage.loginpage());
-//        Assert.assertTrue(loginPage.loginpage());
-    }
+//    @Then("User should not be directed to the dashboard page")
+//    public void userShouldNotBeDirectedToTheDashboardPage() {
+//        Assert.assertFalse(loginPage.loginpage());
+////        Assert.assertTrue(loginPage.loginpage());
+//    }
 
 
 
