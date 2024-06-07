@@ -20,8 +20,24 @@ public class ProductPage extends BasePage {
 
     @FindBy (id = "add-to-cart-sauce-labs-backpack")
     private WebElement btnAddTocardSauceLabsBackpackk;
+
     @FindBy(id = "shopping_cart_container")
     private WebElement cart;
+
+    @FindBy (xpath = "//select[@class='product_sort_container']")
+    private WebElement sortProduct;
+
+    @FindBy (xpath = "//option[.='Name (Z to A)']")
+    private WebElement sortZtoA;
+
+    @FindBy (xpath = "//button[@id='add-to-cart-sauce-labs-onesie']")
+    private WebElement BtnaddtocartSaucelabsOnesie;
+
+    @FindBy (xpath = "//button[@id='add-to-cart-test.allthethings()-t-shirt-(red)']")
+    private WebElement BtnaddtocartTshirtRed;
+
+
+
 
     public boolean verifyTitleProductSauceLabsBackpack(){
         return isDisplayed(titleProductSauceLabsBackpack);
@@ -44,10 +60,39 @@ public class ProductPage extends BasePage {
         waitForElementClickable(btnAddTocardSauceLabsBackpackk);
         click(btnAddTocardSauceLabsBackpackk);
     }
+    public void clickAddToCartSauceLabsOnesie() {
+        scrollIntoView(BtnaddtocartSaucelabsOnesie);
+        waitForElementClickable(BtnaddtocartSaucelabsOnesie);
+        click(BtnaddtocartSaucelabsOnesie);
+    }
+
+    public void clickAddToCartTShirtRed() {
+        scrollIntoView(BtnaddtocartTshirtRed);
+        waitForElementClickable(BtnaddtocartTshirtRed);
+        click(BtnaddtocartTshirtRed);
+    }
+
     public void clickCart(){
         waitForElementClickable(cart);
         click(cart);
     }
+
+    public boolean verifySortProductSauceLabBackpackIsDisplayed(){
+        return isDisplayed(sortProduct);
+    }
+
+    public void clickSortProductSauceLabsbackpack(){
+        scrollIntoView(sortProduct);
+        waitForElementClickable(sortProduct);
+        click(sortProduct);
+    }
+
+    public void clickSortAtoZ(){
+        scrollIntoView(sortProduct);
+        waitForElementClickable(sortProduct);
+        click(sortZtoA);
+    }
+
 
 
 }

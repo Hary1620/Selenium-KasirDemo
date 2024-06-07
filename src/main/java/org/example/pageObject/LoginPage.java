@@ -21,6 +21,11 @@ public class LoginPage extends BasePage {
     private WebElement labelProduct;
     @FindBy(xpath = "//h3[.='Epic sadface: Sorry, this user has been locked out.']")
     private WebElement errorMessage;
+    @FindBy (xpath = "//div[@class='login_wrapper']")
+    private WebElement loginPage;
+    @FindBy (xpath = "//img[@alt='Sauce Labs Backpack']")
+    private WebElement problemdashboard;
+
 
 
     public void inputFieldUserName(String userName){
@@ -39,13 +44,18 @@ public class LoginPage extends BasePage {
         return isDisplayed(labelProduct);
     }
 
-    public boolean isLabelProductPresent() {
-        try {
-            return labelProduct.isDisplayed();
-        } catch (NoSuchElementException e) {
-            return false;
-        }
+//    public boolean isLabelProductPresent() {
+//        try {
+//            return loginPage.isDisplayed();
+//        } catch (NoSuchElementException e) {
+//            return false;
+//        }
+//    }
+    public boolean loginpage(){
+        waitForElementVisible(loginPage);
+        return isDisplayed(loginPage);
     }
+
     public boolean verifyLoginPage(){
         waitForElementVisible(fieldUserName);
         waitForElementVisible(fieldPassword);
@@ -57,5 +67,12 @@ public class LoginPage extends BasePage {
         waitForElementVisible(errorMessage);
         return errorMessage.getText();
     }
+
+    public boolean verifyproblemdashboard(){
+        waitForElementVisible(problemdashboard);
+        return isDisplayed(problemdashboard);
+    }
+
+
 
 }

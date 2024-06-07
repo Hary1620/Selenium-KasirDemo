@@ -41,8 +41,8 @@ public class LoginSteps {
 
     @Then("User should not be directed to the dashboard page")
     public void userShouldNotBeDirectedToTheDashboardPage() {
-//        Assert.assertFalse(loginPage.isLabelProductPresent());
-        Assert.assertTrue(loginPage.verifyLabelProduct());
+        Assert.assertFalse(loginPage.loginpage());
+//        Assert.assertTrue(loginPage.loginpage());
     }
 
 
@@ -55,4 +55,8 @@ public class LoginSteps {
     }
 
 
+    @Then("User should be directed to the problem dashboard page")
+    public void userShouldBeDirectedToTheProblemDashboardPage() {
+        Assert.assertTrue(loginPage.verifyproblemdashboard());
+    }
 }
