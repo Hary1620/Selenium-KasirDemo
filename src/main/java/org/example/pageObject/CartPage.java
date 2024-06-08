@@ -19,6 +19,9 @@ public class CartPage extends BasePage {
     @FindBy (xpath = "//button[@id='continue-shopping']")
     private WebElement btnContinueshopping;
 
+    @FindBy (xpath = "//div[.='Test.allTheThings() T-Shirt (Red)']")
+    private WebElement tittleProductAllTheThingsTShirtRed;
+
     public void clickCheckout(){
         waitForElementClickable(btnCheckout);
         click(btnCheckout);
@@ -27,6 +30,9 @@ public class CartPage extends BasePage {
     public void clickRemove(){
         waitForElementClickable(btnremovetshirtred);
         click(btnremovetshirtred);
+    }
+    public boolean verifyRemoveProductAllTheThingsTShirtRed(){
+        return isDisplayed(tittleProductAllTheThingsTShirtRed);
     }
 
     public void clickContinueShopping(){

@@ -41,7 +41,7 @@ public class Hooks {
     public void openBrowser(){
         //inisiasi library selenium
        driver = new ChromeDriver(GenerateDriverChrome());
-        driver = new EdgeDriver(GenerateEdgeDriver());
+//        driver = new EdgeDriver(GenerateEdgeDriver());
 
         String appUrl = "https://www.saucedemo.com/";
         driver.get(appUrl);//fungsi untuk ngebuka link html
