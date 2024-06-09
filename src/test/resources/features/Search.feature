@@ -18,7 +18,7 @@ When User login with valid username "standard_user" and password "secret_sauce"
     Then User should be directed to the dashboard page
     And sort product icon is displayed
     And user click on sort product icon
-    And Choose sort Name "A to Z"
+    Then Choose sort Name "A to Z"
 #    Then user click add to cart product "Sauce Labs Backpack" and product "Sauce Labs Bike Light"
 
   Scenario: Sort the product price (Low to High) and add the products to the cart
@@ -26,7 +26,7 @@ When User login with valid username "standard_user" and password "secret_sauce"
     Then User should be directed to the dashboard page
     And sort product icon is displayed
     And user click on sort product icon
-    And Choose sort Price "Low to High"
+    Then Choose sort Price "Low to High"
 
 
   Scenario: Sort the product price (High to Low) and add the products to the cart
@@ -34,5 +34,5 @@ When User login with valid username "standard_user" and password "secret_sauce"
     Then User should be directed to the dashboard page
     And sort product icon is displayed
     And user click on sort product icon
-    And Choose sort Price "High to Low"
+    Then Choose sort Price "High to Low"
 

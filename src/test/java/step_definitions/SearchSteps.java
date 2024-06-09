@@ -25,14 +25,14 @@ public class SearchSteps {
         productPage.clickSortProductSauceLab();
     }
 
-    @And("Choose sort Name {string}")
+    @Then("Choose sort Name {string}")
     public void chooseSortName(String sort) {
 
         productPage.clickSortZtoA();
         productPage.clickSortAtoZ();
     }
 
-    @And("Choose sort Price {string}")
+    @Then("Choose sort Price {string}")
     public void chooseSortPrice(String arg0) {
         productPage.clickSortLowtoHigh();
         productPage.clickSortHightoLow();

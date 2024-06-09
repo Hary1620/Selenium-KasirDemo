@@ -1,3 +1,4 @@
+@Tugas
 Feature: Login Test
   Scenario: Login with valid credentials
     Given User open the web sauce demo
