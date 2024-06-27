@@ -43,7 +43,7 @@ public class Hooks {
        driver = new ChromeDriver(GenerateDriverChrome());
 //        driver = new EdgeDriver(GenerateEdgeDriver());
 
-        String appUrl = "https://www.saucedemo.com/";
+        String appUrl = "https://kasirdemo.belajarqa.com/";
         driver.get(appUrl);//fungsi untuk ngebuka link html
         driver.manage().window().maximize();//fungsi untuk maximize browser
     }

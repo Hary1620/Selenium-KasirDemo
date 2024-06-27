@@ -11,15 +11,15 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-    @FindBy(xpath = "//input[@id='user-name']")
+    @FindBy(xpath = "//input[@id='email']")
     private WebElement fieldUserName;
     @FindBy(xpath = "//input[@id='password']")
     private WebElement fieldPassword;
-    @FindBy(xpath = "//input[@id='login-button']")
+    @FindBy(xpath = "//button[@class='chakra-button css-1n8i4of']")
     private WebElement buttonLogin;
-    @FindBy(xpath = "//span[@class='title']")
+    @FindBy(xpath = "//h3[@class='chakra-heading css-1wswht5']")
     private WebElement labelProduct;
-    @FindBy(xpath = "//h3[.='Epic sadface: Sorry, this user has been locked out.']")
+    @FindBy(xpath = "//div[@class='chakra-alert css-qwanz3']")
     private WebElement errorMessage;
     @FindBy (xpath = "//div[@class='login_wrapper']")
     private WebElement loginPage;
