@@ -31,6 +31,9 @@ public class KategoriPage extends BasePage {
     @FindBy (xpath = "//button[@class='chakra-button css-l5lnz6']")
     private WebElement buttonSimpan;
 
+    @FindBy (className = "css-u3dlpe")
+    private WebElement verifyprodukkategoriisdisplayed;
+
 
 
     public void clickbuttonKategori (){
@@ -56,6 +59,10 @@ public class KategoriPage extends BasePage {
         scrollIntoView(buttonSimpan);
         waitForElementClickable(buttonSimpan);
         click(buttonSimpan);
+    }
+
+    public boolean verifyNewProductInKategoriIsDisplayed(){
+        return isDisplayed(verifyprodukkategoriisdisplayed);
     }
 
 

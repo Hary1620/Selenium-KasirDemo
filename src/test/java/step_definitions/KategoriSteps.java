@@ -2,6 +2,7 @@ package step_definitions;
 
 import hooks.Hooks;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import org.example.pageObject.KategoriPage;
 import org.example.pageObject.RegisterPage;
 import org.junit.Assert;
@@ -32,5 +33,10 @@ public class KategoriSteps {
         kategoriPage.inputnamakategori(Nama);
         kategoriPage.inputdeskripsikategori(Deskripsi);
         kategoriPage.clickButtonSimpan();
+    }
+
+    @Then("verify the product is already on list")
+    public void verifyTheProductIsAlreadyOnList() {
+        Assert.assertTrue(kategoriPage.verifyNewProductInKategoriIsDisplayed());
     }
 }
