@@ -19,8 +19,8 @@ public class KategoriPage extends BasePage {
     @FindBy(xpath = "//a[.='tambah']")
     private WebElement buttonTambah;
 
-    @FindBy (xpath = "//label[@id='nama-label']")
-    private WebElement tambahKategoriPage;
+//    @FindBy (xpath = "//label[@id='nama-label']")
+//    private WebElement tambahKategoriPage;
 
     @FindBy (xpath = "//input[@id='nama']")
     private WebElement fieldinputnamakategori;

@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
                 "html:target/site/cucumber-pretty.html",
                 "json:target/cucumber/cucumber.json"
         }
-        , tags = "@kategori"
+        , tags = "@produk"
 
 )
 public class RunCukesTest {
