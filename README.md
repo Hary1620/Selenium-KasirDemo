@@ -1,10 +1,10 @@
 # Selenium Web Project
 
 ## Overview
-This project is a Selenium-based web testing framework written in Java. It uses Maven for build automation and dependency management, and Cucumber for writing test scenarios in a readable BDD (Behavior Driven Development) format.
+The Kasir demo website is a simulation platform for a cashier system that allows users to try and test various features such as adding products, managing inventory, and processing sales transactions. It is particularly useful for software developers and testers to practice and validate the functionalities of a cashier application.
 
 ## Tools and Technologies
-- **Java 21**: The programming language used for writing the test scripts.
+- **Java 11**: The programming language used for writing the test scripts.
 - **Maven**: Build automation tool used for managing project dependencies and running tests.
 - **IntelliJ IDEA**: Integrated Development Environment (IDE) used for development.
 - **Cucumber for Java**: Plugin for IntelliJ IDEA that supports Cucumber, enabling BDD testing with Gherkin syntax.
@@ -12,7 +12,7 @@ This project is a Selenium-based web testing framework written in Java. It uses 
 ## Getting Started
 
 ### Prerequisites
-- **Java 21**: Make sure Java 21 is installed on your system.
+- **Java 11**: Make sure Java 11 is installed on your system.
 - **Maven**: Ensure Maven is installed and properly configured.
 - **IntelliJ IDEA**: Recommended IDE for development.
 - **Cucumber for Java plugin**: Install the Cucumber for Java plugin in IntelliJ IDEA.
@@ -20,8 +20,8 @@ This project is a Selenium-based web testing framework written in Java. It uses 
 ### Installation
 1. **Clone the repository**:
    ```bash
-   git clone github.com/Hary1620/ALTA-Selenium-QE15-Hary.git
-   cd ALTA-Selenium-QE15-Hary
+   git clone github.com/Hary1620/Selenium-KasirDemo.git
+   cd Selenium-KasirDemo
 2. **Open the project in IntelliJ IDEA**:
 Open IntelliJ IDEA.
 Select File > Open and navigate to the ALTA-Selenium directory.
